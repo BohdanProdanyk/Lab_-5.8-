@@ -31,18 +31,26 @@ public class Main {
 
 
         //task 3
-        int p = 2;
-        if (p==9 | p==8 | p==7 | p==6 | p==5 | p==4 | p==3 | p==1){
-            System.out.println("поверх " + p);
+        int start = 9;
+        int p = 6;//куда їдемо
+        if (p==2){
+            if (p<start){
+                p--;
+                System.out.println("Ви спустились на " + p + " поверх");
+            }
+            else if(p>start){
+                p++;
+                System.out.println("Ви піднялись на " + p + " поверх");
+            }
+        }else if(p==9 | p==8 | p==7 | p==6 | p==5 | p==4 | p==3 | p==1){
+            if (p<start){
+                System.out.println("Ви спустились на " + p + " поверх");
+            }
+            else if(p>start){
+                System.out.println("Ви піднялись на " + p + " поверх");
+            }
         }
-        else if (p==2){
-            p++;
-            System.out.println("поверх 3");
-        }
-        else if (p>9 | p<1){
-            System.out.println("*бум* ви застряли у ліфті");
-        }
-
+        
 
         //task 4
         System.out.println("Ви погоджуєтесь з умовами ?");
